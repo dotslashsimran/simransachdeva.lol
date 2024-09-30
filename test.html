@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Example</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
+    <style>
+        /* Styles for the header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f1f1f1; /* Light background color for header */
+        }
+
+        .header__left,
+        .header__middle,
+        .header__right {
+            display: flex;
+            align-items: center;
+        }
+
+        .header__middle input {
+            margin: 0 10px; /* Spacing around input */
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
+        }
+
+        /* Modal content */
+        .modal-content {
+            background-color: white;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border-radius: 15px; /* Rounded edges */
+            text-align: center; /* Centered text */
+            width: 80%; /* Could be more or less, depending on screen size */
+            max-width: 400px; /* Maximum width */
+        }
+
+        /* Close button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header__left">
+            <span class="material-icons"> menu </span>
+            <img
+                src="https://i.pinimg.com/originals/ae/47/fa/ae47fa9a8fd263aa364018517020552d.png"
+                alt="Logo"
+                style="width: 40px; height: 40px; object-fit: cover;"
+            />
+        </div>
+
+        <div class="header__middle">
+            <span class="material-icons"> search </span>
+            <input type="text" placeholder="Search mail" />
+            <span class="material-icons"> arrow_drop_down </span>
+        </div>
+
+        <div class="header__right">
+            <span class="material-icons"> bedtime </span>
+            <span class="material-icons"> apps </span>
+            <span class="material-icons"> notifications </span>
+            <!-- Use the profile image for the modal -->
+            <img
+                src="https://i.pinimg.com/originals/ae/47/fa/ae47fa9a8fd263aa364018517020552d.png"
+                alt="Profile Icon"
+                id="profileImage"
+                style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover; cursor: pointer;"
+            />
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img
+                src="img.jpg"
+                alt="Profile Icon"
+                style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;"
+            />
+            <h2>Hi, it's Simran</h2>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image that opens the modal
+        var img = document.getElementById("profileImage");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the image, open the modal
+        img.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

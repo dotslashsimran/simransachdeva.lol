@@ -1,0 +1,453 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  .body{
+    font-family: 'Product Sans', sans-serif;
+  }
+  
+  /* Header */
+  .header__left img {
+    object-fit: contain;
+    height: 80px;
+    margin-left: 5px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid whitesmoke;
+    font-family: 'Product Sans', sans-serif;
+  }
+
+  .header__right {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center vertically */
+  }
+
+  .header__right span, /* Add spacing between material icons */
+  .header__right img {
+      margin-right: 15px; /* 20px space between items */
+  }
+
+  .header__right span:last-child, /* Remove margin from the last item */
+  .header__right img:last-child {
+    margin-right: 0; /* No margin on the last item */
+  }
+  
+  .header__left {
+      display: flex;
+      align-items: center;
+  }
+  
+  .header__left span {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .header__middle {
+    display: flex;
+    flex: 0.7;
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .material-icons {
+    color: gray;
+  }
+  
+  .header__middle input {
+    border: none;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-size: medium;
+    background-color: transparent;
+  }
+  
+  .header__right {
+    display: flex;
+    padding-right: 20px;
+  }
+  
+  .header__right span {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    flex: 0.3;
+    max-width: 300px;
+    padding-right: 20px;
+  }
+  
+  .sidebar__compose {
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    color: gray;
+    padding: 15px;
+    border-radius: 30px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.75);
+  }
+
+  .sidebar__compose span {
+    margin-right: 5px;
+  }
+  
+  .sidebarOption {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+    color: #818181;
+  }
+  
+  .sidebarOption .material-icons {
+    padding: 5px;
+  }
+  
+  .sidebarOption h3 {
+    flex: 1;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  
+  .sidebarOption:hover,
+  .sidebarOption:hover h3,
+  .sidebarOption:hover .material-icons,
+  .sidebarOption__active,
+  .sidebarOption__active h3,
+  .sidebarOption__active .material-icons {
+    background-color: #fcecec;
+    color: #c04b37;
+    font-weight: 800;
+  }
+  
+  .sidebar__footer {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .sidebar__footerIcons .material-icons {
+    margin: 7px;
+    cursor: pointer;
+  }
+  
+  /* main body */
+  .main__body {
+    display: flex;
+    height: 100vh;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  
+  body {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+  
+  /* email list */
+  .emailList {
+    font-family: 'Nunito Sans', sans-serif;
+    flex: 1;
+    overflow: scroll;
+  }
+  
+  .emailList__settings {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid whitesmoke;
+    background-color: white;
+    z-index: 999;
+    padding: 8px;
+  }
+  
+  .emailList__settingsLeft {
+    display: flex;
+    align-items: center;
+  }
+  
+  .emailList__settings .material-icons {
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  .section {
+    display: flex;
+    align-items: center;
+    border-bottom-width: 2px;
+    padding: 15px;
+    min-width: 200px;
+    cursor: pointer;
+    color: grey;
+    border-width: 0;
+  }
+  
+  .emailList__sections {
+    position: sticky;
+    top: 0;
+    display: flex;
+    background-color: white;
+    border-bottom: 1px solid whitesmoke;
+    z-index: 999;
+  }
+  
+  .section__selected {
+    background-color: whitesmoke;
+    border-width: 3px;
+    color: red;
+    border-bottom: 3px solid red;
+  }
+  
+  .section__selected .material-icons {
+    color: red;
+  }
+  
+  .section:hover {
+    background-color: whitesmoke;
+    border-width: 3px;
+  }
+  
+  .section h4 {
+    font-size: 14px;
+    margin-left: 15px;
+  }
+  
+  .emailRow__options {
+    display: flex;
+    align-items: center;
+  }
+  
+  .emailRow__options .material-icons,
+  input {
+    margin: 5px;
+  }
+  
+  .emailRow {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border-bottom: 1px solid whitesmoke;
+    cursor: pointer;
+    z-index: 999;
+  }
+  
+  .emailRow:hover {
+    border-top: 1px solid whitesmoke;
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.24);
+  }
+
+  .button-container {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    margin-top: 10px; /* Space above the button */
+  }
+
+
+  .headline-mail {
+    margin-left: 70px; /* Existing left margin */
+    margin-right: 10px; /* Space between the text and button */
+    font-size: 26px; /* Adjust text size */
+    font-family: 'Nunito Sans', sans-serif;
+    color: #333; /* Set text color */
+    line-height: 1.5;
+  }
+
+  .inbox-button {
+    background-color: lightgrey; /* Grey background */
+    border: none; /* No border */
+    border-radius: 8px; /* Slightly rounded edges */
+    padding: 5px 10px; /* Padding around the text */
+    cursor: pointer; /* Change cursor to pointer */
+    display: flex; /* Align items within the button */
+    align-items: center; /* Center align items vertically */
+  }
+
+  .close-icon {
+    margin-left: 5px; /* Space between the text and the cross */
+  }
+
+
+  .mail-circle {
+      display: flex; /* Use flexbox for alignment */
+      align-items: flex-start; /* Align items at the start */
+      padding: 10px; /* Optional: Add padding */
+  }
+
+  .icon {
+      font-size: 50px; /* Size for the icon */
+      margin-right: 10px; /* Space between icon and text */
+  }
+
+  .text-container {
+      display: flex; /* Use flexbox to arrange text */
+      flex-direction: column; /* Arrange text in a column */
+  }
+
+  .inline-text {
+      margin: 0; /* Remove default margin */
+      font-weight: 800;
+      font-size: 18px; /* Adjust text size */
+      font-family: 'Product Sans', sans-serif;
+      color: #333;
+  }
+
+  .inline-text-2 {
+    margin: 0; /* Remove default margin */
+    margin-top: 5px;
+    font-size: 12px; /* Adjust text size */
+    font-family: 'Product Sans', sans-serif;
+    color: #333;
+  }
+
+
+  .right-text {
+    font-size: 17px; /* Font size for text on the right */
+    margin-bottom: 10px;
+    margin-left: auto; /* Push to the extreme right */
+    align-self: center; /* Center vertically in the container */
+    font-family: 'Product Sans', sans-serif;
+    color: #333;
+    justify-content: space-between;
+    padding: 20px;
+    margin-right: 30px;
+  }
+  
+  .emailRow__message {
+    display: flex;
+    flex: 0.8;
+    align-items: center;
+    font-size: 13px;
+  }
+  
+  .emailRow__message h4 {
+    width: 400px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  .emailRow__title {
+    font-size: 13px;
+    flex: 0.3;
+  }
+  
+  .emailRow__time {
+    padding-right: 15px;
+    font-size: 10px;
+    font-weight: bold;
+  }
+  
+  .emailRow__description {
+    font-weight: 400;
+    color: gray;
+  }
+
+
+  /* Styles for the header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f1f1f1; /* Light background color for header */
+}
+
+.header__left,
+.header__middle,
+.header__right {
+  display: flex;
+  align-items: center;
+}
+
+.header__middle input {
+  margin: 0 10px; /* Spacing around input */
+}
+
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border-radius: 10px; /* Rounded edges */
+  width: 300px; /* Could be more or less, depending on screen size */
+  position: relative; /* For positioning child elements */
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between; /* Space between dots and close button */
+  align-items: center; /* Center vertically */
+}
+
+.three-dots {
+  display: flex;
+  flex-direction: column; /* Vertical arrangement */
+  cursor: pointer; /* Pointer on hover */
+}
+
+.dot {
+  height: 6px; /* Size of the dot */
+  width: 6px; /* Size of the dot */
+  background-color: #333; /* Color of the dot */
+  border-radius: 50%; /* Make it round */
+  margin: 2px; /* Space between dots */
+}
+  
+.close {
+  font-size: 28px; /* Size for the close button */
+  cursor: pointer; /* Pointer on hover */
+  position: absolute; /* Position absolute within modal-header */
+  right: 20px; /* Adjust this value for horizontal positioning */
+  top: 10px; /* Adjust this value for vertical positioning */
+}
+
+.modal-title {
+  font-weight: bold; /* Bold text */
+  font-size: 16px; /* Adjust size as needed */
+  margin: 0 10px; /* Space around the title */
+  flex-grow: 1; /* Allow title to grow and center it */
+  text-align: center; /* Center the title */
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  text-align: center; /* Center text */
+  margin-top: 20px; /* Space between header and body */
+}
+
+
